@@ -10,7 +10,6 @@ var Form=React.createClass({
       },
       componentWillMount:function(){
           this.arr=[];
-    
       },
       loadDataFromServer:function(){
           
@@ -36,8 +35,13 @@ var Form=React.createClass({
        render:function(){
             return(
                 <div>
-                
-                    <List items={this.arr}/>
+                     <table className="table table-bordered">
+                         <thead>
+                          <th>Name</th>
+                          <th>Age</th>
+                        </thead>
+                         <List items={this.arr}/>
+                    </table>
                 </div>
                 
              )
